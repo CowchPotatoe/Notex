@@ -17,6 +17,9 @@ DocumentWidget::DocumentWidget(QWidget *parent)
     // Create the Markdown editor.
     textInput = new QTextEdit(this);
 
+    // Match the top spacing used by the preview.
+    textInput->document()->setDocumentMargin(5);
+
     // Create the Markdown preview.
     preview = new QWebEngineView(this);
 
@@ -123,7 +126,7 @@ bool DocumentWidget::saveFile(const QString &fileName)
         return false;
     }
 
-    // Create a text stream for writing to the file.
+    // Create a text stream for writing the file.
     QTextStream out(&file);
 
     // Write the Markdown editor's contents to the file.
@@ -373,50 +376,88 @@ QString DocumentWidget::renderHtml(const QString &html) const
     {
         css =
             "<style>"
+
             "html, body {"
             "    background-color: #1c1c1c;"
             "    color: #dadada;"
             "    font-family: sans-serif;"
             "    margin: 0;"
-            "    padding: 4px;"
-            "}"
-            "p {"
-            "    margin-top: 0;"
-            "    margin-bottom: 10px;"
-            "}"
-            "h1, h2, h3, h4, h5, h6 {"
-            "    color: #f0f0f0;"
+            "    padding: 0;"
             "}"
 
+            /* Paragraphs */
+            "p {"
+            "    margin: 0;"
+            "    padding: 0;"
+            "    white-space: pre-wrap;"
+            "}"
+
+            /* Headings */
+            "h1, h2, h3, h4, h5, h6 {"
+            "    color: #f0f0f0;"
+            "    margin: 0;"
+            "    padding: 0;"
+            "    line-height: 1.2;"
+            "}"
+
+            /* Lists */
+            "ul, ol {"
+            "    margin: 0;"
+            "    padding-top: 0;"
+            "    padding-bottom: 0;"
+            "    padding-left: 25px;"
+            "}"
+
+            "li {"
+            "    margin: 0;"
+            "    padding: 0;"
+            "}"
+
+            /* Paragraphs inside list items */
+            "li > p {"
+            "    margin: 0;"
+            "    padding: 0;"
+            "}"
+
+            /* Links */
             "a {"
             "    color: #a882ff;"
             "}"
 
+            /* Inline code */
             "code {"
             "    background-color: #282828;"
             "    color: #dadada;"
             "}"
 
+            /* Code blocks */
             "pre {"
             "    background-color: #282828;"
             "    color: #dadada;"
+            "    margin: 0;"
             "    padding: 10px;"
             "}"
 
+            /* Blockquotes */
             "blockquote {"
             "    color: #b3b3b3;"
             "    border-left: 3px solid #a882ff;"
+            "    margin: 0;"
             "    padding-left: 10px;"
             "}"
 
+            /* Horizontal rules */
             "hr {"
             "    border: 0;"
             "    border-top: 1px solid #333333;"
+            "    margin: 0;"
+            "    padding: 0;"
             "}"
 
+            /* Tables */
             "table {"
             "    border-collapse: collapse;"
-            "    margin: 12px 0;"
+            "    margin: 0;"
             "}"
 
             "th, td {"
@@ -438,50 +479,88 @@ QString DocumentWidget::renderHtml(const QString &html) const
     {
         css =
             "<style>"
+
             "html, body {"
             "    background-color: #ffffff;"
             "    color: #222222;"
             "    font-family: sans-serif;"
             "    margin: 0;"
-            "    padding: 4px;"
-            "}"
-            "p {"
-            "    margin-top: 0;"
-            "    margin-bottom: 10px;"
-            "}"
-            "h1, h2, h3, h4, h5, h6 {"
-            "    color: #222222;"
+            "    padding: 0;"
             "}"
 
+            /* Paragraphs */
+            "p {"
+            "    margin: 0;"
+            "    padding: 0;"
+            "    white-space: pre-wrap;"
+            "}"
+
+            /* Headings */
+            "h1, h2, h3, h4, h5, h6 {"
+            "    color: #222222;"
+            "    margin: 0;"
+            "    padding: 0;"
+            "    line-height: 1.2;"
+            "}"
+
+            /* Lists */
+            "ul, ol {"
+            "    margin: 0;"
+            "    padding-top: 0;"
+            "    padding-bottom: 0;"
+            "    padding-left: 25px;"
+            "}"
+
+            "li {"
+            "    margin: 0;"
+            "    padding: 0;"
+            "}"
+
+            /* Paragraphs inside list items */
+            "li > p {"
+            "    margin: 0;"
+            "    padding: 0;"
+            "}"
+
+            /* Links */
             "a {"
             "    color: #7852ee;"
             "}"
 
+            /* Inline code */
             "code {"
             "    background-color: #f2f2f2;"
             "    color: #222222;"
             "}"
 
+            /* Code blocks */
             "pre {"
             "    background-color: #f2f2f2;"
             "    color: #222222;"
+            "    margin: 0;"
             "    padding: 10px;"
             "}"
 
+            /* Blockquotes */
             "blockquote {"
             "    color: #666666;"
             "    border-left: 3px solid #7852ee;"
+            "    margin: 0;"
             "    padding-left: 10px;"
             "}"
 
+            /* Horizontal rules */
             "hr {"
             "    border: 0;"
             "    border-top: 1px solid #dddddd;"
+            "    margin: 0;"
+            "    padding: 0;"
             "}"
 
+            /* Tables */
             "table {"
             "    border-collapse: collapse;"
-            "    margin: 12px 0;"
+            "    margin: 0;"
             "}"
 
             "th, td {"
