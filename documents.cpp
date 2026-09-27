@@ -383,13 +383,15 @@ QString DocumentWidget::renderHtml(const QString &html) const
             "    font-family: sans-serif;"
             "    margin: 0;"
             "    padding: 0;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Paragraphs */
             "p {"
             "    margin: 0;"
             "    padding: 0;"
-            "    white-space: pre-wrap;"
+            "    white-space: pre-line;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Headings */
@@ -398,6 +400,7 @@ QString DocumentWidget::renderHtml(const QString &html) const
             "    margin: 0;"
             "    padding: 0;"
             "    line-height: 1.2;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Lists */
@@ -406,28 +409,34 @@ QString DocumentWidget::renderHtml(const QString &html) const
             "    padding-top: 0;"
             "    padding-bottom: 0;"
             "    padding-left: 25px;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             "li {"
             "    margin: 0;"
             "    padding: 0;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Paragraphs inside list items */
             "li > p {"
             "    margin: 0;"
             "    padding: 0;"
+            "    white-space: pre-line;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Links */
             "a {"
             "    color: #a882ff;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Inline code */
             "code {"
             "    background-color: #282828;"
             "    color: #dadada;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Code blocks */
@@ -436,6 +445,8 @@ QString DocumentWidget::renderHtml(const QString &html) const
             "    color: #dadada;"
             "    margin: 0;"
             "    padding: 10px;"
+            "    white-space: pre-wrap;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Blockquotes */
@@ -444,6 +455,7 @@ QString DocumentWidget::renderHtml(const QString &html) const
             "    border-left: 3px solid #a882ff;"
             "    margin: 0;"
             "    padding-left: 10px;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Horizontal rules */
@@ -458,12 +470,14 @@ QString DocumentWidget::renderHtml(const QString &html) const
             "table {"
             "    border-collapse: collapse;"
             "    margin: 0;"
+            "    max-width: 100%;"
             "}"
 
             "th, td {"
             "    border: 1px solid #555555;"
             "    padding: 6px 10px;"
             "    text-align: left;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             "th {"
@@ -486,13 +500,15 @@ QString DocumentWidget::renderHtml(const QString &html) const
             "    font-family: sans-serif;"
             "    margin: 0;"
             "    padding: 0;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Paragraphs */
             "p {"
             "    margin: 0;"
             "    padding: 0;"
-            "    white-space: pre-wrap;"
+            "    white-space: pre-line;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Headings */
@@ -501,6 +517,7 @@ QString DocumentWidget::renderHtml(const QString &html) const
             "    margin: 0;"
             "    padding: 0;"
             "    line-height: 1.2;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Lists */
@@ -509,28 +526,34 @@ QString DocumentWidget::renderHtml(const QString &html) const
             "    padding-top: 0;"
             "    padding-bottom: 0;"
             "    padding-left: 25px;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             "li {"
             "    margin: 0;"
             "    padding: 0;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Paragraphs inside list items */
             "li > p {"
             "    margin: 0;"
             "    padding: 0;"
+            "    white-space: pre-line;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Links */
             "a {"
             "    color: #7852ee;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Inline code */
             "code {"
             "    background-color: #f2f2f2;"
             "    color: #222222;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Code blocks */
@@ -539,6 +562,8 @@ QString DocumentWidget::renderHtml(const QString &html) const
             "    color: #222222;"
             "    margin: 0;"
             "    padding: 10px;"
+            "    white-space: pre-wrap;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Blockquotes */
@@ -547,6 +572,7 @@ QString DocumentWidget::renderHtml(const QString &html) const
             "    border-left: 3px solid #7852ee;"
             "    margin: 0;"
             "    padding-left: 10px;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             /* Horizontal rules */
@@ -561,12 +587,14 @@ QString DocumentWidget::renderHtml(const QString &html) const
             "table {"
             "    border-collapse: collapse;"
             "    margin: 0;"
+            "    max-width: 100%;"
             "}"
 
             "th, td {"
             "    border: 1px solid #cccccc;"
             "    padding: 6px 10px;"
             "    text-align: left;"
+            "    overflow-wrap: anywhere;"
             "}"
 
             "th {"
