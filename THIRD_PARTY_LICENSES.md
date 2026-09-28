@@ -1,9 +1,9 @@
 # Third-Party Software
-Notex includes third-party software with licenses separate from the
-Notex project.
+Bambuu includes third-party software with licenses separate from the
+Bambuu project.
 
 ## md4qt
-Notex uses md4qt for Markdown parsing.
+Bambuu uses md4qt for Markdown parsing.
 - Project: https://github.com/KDE/md4qt
 - Source: `thirdparty/md4qt/`
 The md4qt source distribution contains files under different licenses.
@@ -12,7 +12,7 @@ are retained in `thirdparty/md4qt/LICENSES/` and with the applicable
 source files.
 
 ## KaTeX
-Notex uses KaTeX for LaTeX math rendering.
+Bambuu uses KaTeX for LaTeX math rendering.
 - Project: https://github.com/KaTeX/KaTeX
 - Source: `thirdparty/katex/`
 The original KaTeX license and copyright information are retained

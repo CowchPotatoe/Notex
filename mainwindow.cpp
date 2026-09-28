@@ -465,7 +465,7 @@ void MainWindow::setupFileActions()
     // Export the preview as a PDF.
     connect(ui->actionExportPDF, &QAction::triggered,
             this, &MainWindow::exportPDF);
-    // Exit Notex.
+    // Exit Bambuu.
     connect(ui->actionExit, &QAction::triggered,
             this, &MainWindow::exitApp);
 }
@@ -640,7 +640,7 @@ void MainWindow::openDocument(const QString &fileName)
             // Show an error if the file could not be opened.
             QMessageBox::warning(
                 this,
-                "Notex",
+                "Bambuu",
                 "Could not open the file.");
             return;
         }
@@ -657,7 +657,7 @@ void MainWindow::openDocument(const QString &fileName)
     if (!document->loadFile(fileName))
     {
         // Show an error if the file could not be opened.
-        QMessageBox::warning(this, "Notex", "Could not open the file.");
+        QMessageBox::warning(this, "Bambuu", "Could not open the file.");
         delete document;
         return;
     }
@@ -696,7 +696,7 @@ void MainWindow::newTab()
     connect(document->editor(), &QTextEdit::cursorPositionChanged,
             this, &MainWindow::updateCursorPosition);
     // Reset the window title for an untitled document.
-    setWindowTitle("Notex");
+    setWindowTitle("Bambuu");
     // Apply the current theme to the new document.
     document->setDarkMode(darkMode);
 }
@@ -719,7 +719,7 @@ void MainWindow::saveFile()
     if (!document->saveFile(document->fileName()))
     {
         // Show an error if the file could not be saved.
-        QMessageBox::warning(this, "Notex", "Could not save the file.");
+        QMessageBox::warning(this, "Bambuu", "Could not save the file.");
         return;
     }
     // Update the tab title.
@@ -757,7 +757,7 @@ void MainWindow::saveFileAs()
         // Show an error if the file could not be saved.
         QMessageBox::warning(
             this,
-            "Notex",
+            "Bambuu",
             "Could not save the file.");
         return;
     }
@@ -828,7 +828,7 @@ void MainWindow::exportPDF()
     {
         QMessageBox::information(
             this,
-            "Notex",
+            "Bambuu",
             "There is no Markdown to export.");
         return;
     }
@@ -910,7 +910,7 @@ void MainWindow::exportPDF()
 
 void MainWindow::exitApp()
 {
-    // Close the Notex window.
+    // Close the Bambuu window.
     close();
 }
 

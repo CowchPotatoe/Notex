@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 # Prevent Qt Creator's injected CMake helper from running.
 set(CMAKE_PROJECT_INCLUDE_BEFORE "")
 
-project(Notex VERSION 0.1 LANGUAGES CXX)
+project(Bambuu VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -19,7 +19,7 @@ find_package(Qt6 REQUIRED COMPONENTS
 )
 
 # --------------------------------------------------
-# Notex
+# Bambuu
 # --------------------------------------------------
 
 set(PROJECT_SOURCES
@@ -34,7 +34,7 @@ set(PROJECT_SOURCES
     documents.cpp
 )
 
-qt_add_executable(Notex
+qt_add_executable(Bambuu
     MANUAL_FINALIZATION
     ${PROJECT_SOURCES}
 )
@@ -45,12 +45,12 @@ qt_add_executable(Notex
 
 # md4qt is header-only.
 # Its headers are located in thirdparty/md4qt/md4qt/.
-target_include_directories(Notex PRIVATE
+target_include_directories(Bambuu PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/md4qt
 )
 
 # Enable md4qt's Qt support.
-target_compile_definitions(Notex PRIVATE
+target_compile_definitions(Bambuu PRIVATE
     MD4QT_QT_SUPPORT
 )
 
@@ -74,7 +74,7 @@ file(GLOB KATEX_FONT_FILES
     ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/katex/fonts/*
 )
 
-qt_add_resources(Notex
+qt_add_resources(Bambuu
     "katex"
     PREFIX "/katex"
     BASE "${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/katex"
@@ -88,21 +88,21 @@ qt_add_resources(Notex
 # Libraries
 # --------------------------------------------------
 
-target_link_libraries(Notex PRIVATE
+target_link_libraries(Bambuu PRIVATE
     Qt6::Widgets
     Qt6::WebEngineWidgets
 )
 
-set_target_properties(Notex PROPERTIES
+set_target_properties(Bambuu PROPERTIES
     INSTALL_RPATH "$ORIGIN/../lib64"
 )
 
 include(GNUInstallDirs)
 
-install(TARGETS Notex
+install(TARGETS Bambuu
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
-qt_finalize_executable(Notex)
+qt_finalize_executable(Bambuu)

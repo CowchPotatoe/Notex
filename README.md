@@ -1,4 +1,4 @@
-# Notex
+# Bambuu
 A Markdown editor built with **C++ and Qt** with live preview and PDF export.
 > **Status:** Beta — v0.2.0
 
@@ -17,57 +17,57 @@ A Markdown editor built with **C++ and Qt** with live preview and PDF export.
 * File system browser
 
 ## Installation
-Notex is currently distributed as both an **AppImage** and a **tar.gz** package for **64-bit Linux (x86_64)** systems.
+Bambuu is currently distributed as both an **AppImage** and a **tar.gz** package for **64-bit Linux (x86_64)** systems.
 ### AppImage
-The AppImage is the easiest way to run Notex without installing it.
-1. Download `Notex-x86_64.AppImage`.
+The AppImage is the easiest way to run Bambuu without installing it.
+1. Download `Bambuu-x86_64.AppImage`.
 2. Make the file executable:
    ```bash
-   chmod +x Notex-x86_64.AppImage
+   chmod +x Bambuu-x86_64.AppImage
    ```
-3. Run Notex:
+3. Run Bambuu:
    ```bash
-   ./Notex-x86_64.AppImage
+   ./Bambuu-x86_64.AppImage
    ```
 The AppImage can be moved to another folder and run from there.
-> **Note:** The AppImage contains the Notex application, Qt libraries, plugins, and application icon. However, application-menu and dock integration can depend on the Linux desktop environment. Some desktop environments may require additional AppImage integration support for the application to appear as an installed application with its icon.
+> **Note:** The AppImage contains the Bambuu application, Qt libraries, plugins, and application icon. However, application-menu and dock integration can depend on the Linux desktop environment. Some desktop environments may require additional AppImage integration support for the application to appear as an installed application with its icon.
 ### tar.gz
-The tarball contains the Notex application, required Qt libraries, plugins, application icon, and installation scripts.
-1. Download `Notex-release.tar.gz`.
+The tarball contains the Bambuu application, required Qt libraries, plugins, application icon, and installation scripts.
+1. Download `Bambuu-release.tar.gz`.
 2. Extract the archive:
    ```bash
-   tar -xzf Notex-release.tar.gz
+   tar -xzf Bambuu-release.tar.gz
    ```
 3. Enter the release directory:
    ```bash
-   cd Notex-release
+   cd Bambuu-release
    ```
 4. Install the desktop launcher:
    ```bash
    ./install.sh
    ```
-The installer creates a desktop entry in the user's application menu and registers the Notex icon.
-Notex can also be run directly from the release directory without installing the desktop launcher:
+The installer creates a desktop entry in the user's application menu and registers the Bambuu icon.
+Bambuu can also be run directly from the release directory without installing the desktop launcher:
 ```bash
 ./run.sh
 ```
 
 ## About
-Notex is a personal C++/Qt project created to learn desktop GUI development, text processing, Markdown parsing, file handling, and document rendering.
+Bambuu is a personal C++/Qt project created to learn desktop GUI development, text processing, Markdown parsing, file handling, and document rendering.
 
 ## Beta
-Notex is currently a beta project. Some features are incomplete, and bugs may still exist.
+Bambuu is currently a beta project. Some features are incomplete, and bugs may still exist.
 
 ## Third-Party Software
-Notex uses [md4qt](https://github.com/KDE/md4qt) for Markdown parsing
+Bambuu uses [md4qt](https://github.com/KDE/md4qt) for Markdown parsing
 and [KaTeX](https://github.com/KaTeX/KaTeX) for LaTeX math rendering.
 The third-party source and applicable license information are retained
 under `thirdparty/`.
 
 ## License
-Notex is licensed under the **GNU Lesser General Public License, version 2.1 (LGPL-2.1)**.
+Bambuu is licensed under the **GNU Lesser General Public License, version 2.1 (LGPL-2.1)**.
 See the [LICENSE](LICENSE) file for the full license text.
-Notex also uses the Qt framework, which is distributed under its own applicable licensing terms.
+Bambuu also uses the Qt framework, which is distributed under its own applicable licensing terms.
 
 ## Author
 Ivan Chen

@@ -17,11 +17,11 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Notex</string>
+   <string>Bambuu</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resources/resources.qrc">
-    <normaloff>:/notex.png</normaloff>:/notex.png</iconset>
+    <normaloff>:/Bambuu.png</normaloff>:/Bambuu.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">

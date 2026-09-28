@@ -352,7 +352,7 @@ static const std::map<typename Trait::String, const char16_t *> s_entityMap =
      {Trait::latin1ToString("&NotElement;"), u"\x2209"},
      {Trait::latin1ToString("&NotEqual;"), u"\x2260"},
      {Trait::latin1ToString("&NotEqualTilde;"), u"\x2242\x0338"},
-     {Trait::latin1ToString("&NotExists;"), u"\x2204"},
+     {Trait::latin1ToString("&Bambuuists;"), u"\x2204"},
      {Trait::latin1ToString("&NotGreater;"), u"\x226F"},
      {Trait::latin1ToString("&NotGreaterEqual;"), u"\x2271"},
      {Trait::latin1ToString("&NotGreaterFullEqual;"), u"\x2267\x0338"},
